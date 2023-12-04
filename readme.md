@@ -33,7 +33,7 @@ const port = 4000;
 
 
 const server = http.createServer((req, res) => {
-  if(req.method == 'GET' && req.url =='/')
+  if(req.method == 'GET' && req.url =='/text')
   {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
@@ -44,12 +44,24 @@ const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'text/html');
     res.end('<h1>hello World</h1>')
   }
-  else{
+  else if(req.method == 'GET' && req.url =='/json'){{
     let data = {firstname:"Rami",lastname:"Chargui"}
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(data)) //Converts a JavaScript object or value into a JSON string.
   }
+  else if(req.method == 'POST' && req.url=="/post")
+   {
+      let sendedData = ''
+
+      req.on('data',(chunk)=>{
+          sendedData = sendedData + chunk
+      })
+
+      req.on('end',()=>{
+        console.log(sendedData)
+      })
+   }
   
 });
 
