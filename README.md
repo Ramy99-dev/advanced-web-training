@@ -1,6 +1,6 @@
 Hello and welcome to the course where you'll delve into advanced technologies, skills, and web development. Prepare yourself to become a web wizard by mastering cutting-edge technologies. Throughout this course, you will learn:
 
-- NodeJS: Dive into server-side JavaScript with the powerful NodeJS framework.
+- NodeJS: Dive into server-side JavaScript with NodeJS.
 - ExpressJS: Explore the widely-used web application framework for Node.js, making web development with Node even more straightforward.
 - MongoDB: Discover the world of NoSQL databases and learn how to work with MongoDB, a leading document-oriented database.
 - Git and GitHub: Master version control and collaborative coding using Git, with a focus on effective collaboration through GitHub.
