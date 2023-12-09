@@ -12,3 +12,6 @@ Hello and welcome to the course where you'll delve into advanced technologies, s
 
 Here, you will find a list of branches containing detailed information about each course : <br/>
 <a href="https://github.com/Ramy99-dev/advanced-web-training/tree/Session1-NodeJS">- NodeJS</a>
+<a href="https://github.com/Ramy99-dev/advanced-web-training/tree/Session2-Express">- Express</a>
+
+
