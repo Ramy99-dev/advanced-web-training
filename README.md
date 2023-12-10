@@ -122,7 +122,7 @@ Now, we are prepared to create our server. First, generate a file named "server.
     app.listen(5000, () => {
         console.log("Listening on port 5000");
     });
-
+```
 to start our server open terminal and execute this command 
 ```
 npm start
