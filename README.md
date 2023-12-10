@@ -106,6 +106,7 @@ Now, update the 'scripts' section in your 'package.json' file by adding the foll
 This allows you to execute the server using nodemon by running the command npm start. Nodemon will automatically monitor changes and restart the server as needed.
 
 Now, we are prepared to create our server. First, generate a file named "server.js" and insert the following code:
+```
     // File: server.js
 
     // Importing the Express.js library
