@@ -286,5 +286,5 @@ app.post('/add-todo', verify, (req, res) => {
 
 // some code
 ```
-Now, if we attempt to add a todo with the content 'Buy groceries', which already exists in the list, the server should respond with 'Already exist'.<br/>
+Now, if we attempt to add a todo with the content 'Buy groceries', which already exists in the list, the server should respond with 'Already exist'.<br/><br/>
 <img width="400px" src="assets/api9.png"><br/>
