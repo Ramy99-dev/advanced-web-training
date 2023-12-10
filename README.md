@@ -147,7 +147,7 @@ app.listen(8083, () => {
 ```
 This code defines an API endpoint for handling GET requests at the '/todos' route. When a client makes a GET request to this API endpoint, the server responds by sending a JSON representation of the 'todos' data back to the client. <br/>
 
-Now, if we use Postman to make a GET request to '/todos', we should expect to see the list of todos displayed in the response.
+Now, if we use Postman to make a GET request to '/todos', we should expect to see the list of todos displayed in the response.<br/>
 <img width="400px" src="assets/api5.png"><br/>
 
 After returning the list of todos, it's time to add some new ones. To achieve this, the client will send data to the server. Consequently, the endpoint will be responsible for handling POST requests originating from the client
@@ -266,7 +266,7 @@ const verify = (req, res, next) => {
     }
 };
 ```
-We need to update the code for the POST request responsible for adding a new todo. To do this, we should incorporate the verify middleware just before the function that handles the addition of a new todo.
+We need to update the code for the POST request responsible for adding a new todo. To do this, we should incorporate the verify middleware just before the function that handles the addition of a new todo.<br/>
 ```
 // some code
 
