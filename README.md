@@ -1,20 +1,16 @@
-Hello and welcome to the course where you'll delve into advanced technologies, skills, and web development. Prepare yourself to become a web wizard by mastering cutting-edge technologies. Throughout this course, you will learn:
+# Database
+In this session, we will delve into the main databases and continue the development of our application, so we need to install these software tools :
 
-- NodeJS: Dive into server-side JavaScript with NodeJS.
-- ExpressJS: Explore the widely-used web application framework for Node.js, making web development with Node even more straightforward.
-- MongoDB: Discover the world of NoSQL databases and learn how to work with MongoDB, a leading document-oriented database.
-- Git and GitHub: Master version control and collaborative coding using Git, with a focus on effective collaboration through GitHub.
-- DevOps Practices: Understand and implement DevOps practices to enhance collaboration between development and operations teams.
-- Jenkins: Learn about continuous integration and continuous delivery (CI/CD) with Jenkins, a popular automation server.
-- Docker: Explore containerization with Docker, making your applications portable and scalable.
-- Kubernetes: Delve into container orchestration with Kubernetes, a powerful tool for managing containerized applications in a clustered environment.
-- Istio: Explore service mesh architecture with Istio, enhancing the observability, security, and control of microservices.
+## MongoDB : 
 
-Here, you will find a list of branches containing detailed information about each course : <br/>
-<a href="https://github.com/Ramy99-dev/advanced-web-training/tree/Session1-NodeJS">- NodeJS</a><br/>
-<a href="https://github.com/Ramy99-dev/advanced-web-training/tree/Session2-Express">- Express</a><br/>
-<a href="https://github.com/Ramy99-dev/advanced-web-training/tree/Session2-API">- API</a><br/>
-<a href="https://github.com/Ramy99-dev/advanced-web-training/tree/Session3-Database">- Database</a>
+First, install MongoDB by visiting: https://www.mongodb.com/try/download/community
+
+Additionally, you may find this YouTube video helpful for the installation process : 
+https://www.youtube.com/watch?v=6_NSkDRXPZk
+
+## API Testing :
+Due to connection problems, we will replace Postman with Insomnia : https://insomnia.rest/download
+
 
 
 
