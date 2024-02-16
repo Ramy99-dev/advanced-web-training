@@ -1,92 +1,42 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const cors = require('cors')
-
 const app = express()
 
 app.use(express.json())
-app.use(cors('*'))
+const uri = "mongodb://localhost:27017";
+mongoose.connect(uri)
 
-const PORT = 5000
-
-mongoose.connect("mongodb://127.0.0.1/test")
-app.listen(PORT,()=>{
-    console.log(`Listening on port ${PORT}`)
+let schema = new mongoose.Schema({
+    content:{type:String , require:true},
+    isCompleted:{type:Boolean , require:true}
 })
 
+let Todo = mongoose.model('todo',schema)
 
-let todoSchema = new mongoose.Schema(
-{
-    content : {type:String , required : true},
-    isCompleted : {type:Boolean , required : true}
-}) 
-
-let Todo = mongoose.model('todo',todoSchema);
+const verify = (req,res,next)=>{
+    next()
+}
 
 
-app.get('/todos',async(req,res)=>{
-    const result = await Todo.find()
-    res.send(result)
+app.get('/todos',async (req,res)=>{
+    let todos = await Todo.find()
+    res.send(todos)
 })
 
-app.get('/todo/:id',async(req,res)=>{
-    try
-    {
-        const result = await Todo.findById(req.params.id)
-         res.send(result)
-    }
-    catch(err)
-    {
-        res.status(500).send("Error : " + err);
-    }
+app.post('/add-todo',verify,async (req,res)=>{
+  let todo = new Todo(req.body)
+  await todo.save()
+})
+
+app.delete('/todo/:id',async (req,res)=>{
+  let deletedTodo = await Todo.findByIdAndDelete(req.params.id)
+  res.send(deletedTodo)
     
 })
 
-app.post('/add-todo',async(req,res)=>{
-    try 
-    {
-        let newTodo = {
-            "content":req.body.content,
-            "isCompleted":false
-        }  
-        let todo = new Todo(newTodo)
-        
-        newTodo = await todo.save()
-        res.send(newTodo)
-    }
-    catch(err)
-    {
-        res.status(500).send("Error : " + err);
-    }
-    
- 
+app.listen(5000,()=>{
+    console.log("Listening on port 5000")
 })
-
-app.delete('/delete-todo/:id',async(req,res)=>{
-    try
-    {
-        const result = await Todo.findOneAndDelete(req.params.id)
-        res.send(result)
-    }
-    catch(err)
-    {
-        res.status(500).send("Error : "+err)
-    }
-})
-
-app.put('/update-todo',async(req,res)=>{
-    try
-    {
-        const result = await Todo.findByIdAndUpdate(req.body.id,req.body)
-        res.send(result)
-    }
-    catch(err)
-    {
-        res.status(500).send("Error : " + err);
-    }
-   
-})
-
 
 
 
