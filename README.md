@@ -14,7 +14,7 @@ Here, you will find a list of branches containing detailed information about eac
 <a href="https://github.com/Ramy99-dev/advanced-web-training/tree/Session1-NodeJS">- NodeJS</a><br/>
 <a href="https://github.com/Ramy99-dev/advanced-web-training/tree/Session2-Express">- Express</a><br/>
 <a href="https://github.com/Ramy99-dev/advanced-web-training/tree/Session2-API">- API</a><br/>
-<a href="https://github.com/Ramy99-dev/advanced-web-training/tree/Session3-Database">- Database</a>
+<a href="https://github.com/Ramy99-dev/advanced-web-training/tree/Session3-Database">- Database</a><br/>
 <a href="https://github.com/Ramy99-dev/advanced-web-training/tree/Session4-MVC-architecture">- MVC Architecture</a>
 
 
